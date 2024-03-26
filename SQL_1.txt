@@ -1,0 +1,35 @@
+Entity - attribute - table structure
+ 
+    
+    Entities
+    1. Theatre
+    2. movie
+    3. show
+    4. Date
+
+    Table structure(Theatre)
+    Theatre
+        Theatre_id(Primary key)
+        Theatre_Name
+        Theatre_Location
+        Capacity
+
+    Movie
+        Movie_ID (Primary Key)
+        Movie_Name
+        Genre
+        Duration
+
+    Show
+        Show_ID (Primary Key)
+        Movie_ID (Foreign Key referencing Movie)
+        Theatre_ID (Foreign Key referencing Theatre)
+        Date_ID (Foreign Key referencing Date)
+        Show_Time
+        Screen_Number   
+
+    Date
+        Date_ID (Primary Key)
+        Date
+
+
