@@ -1,12 +1,3 @@
-Entity - attribute - table structure
- 
-    
-    Entities
-    1. Theatre
-    2. movie
-    3. show
-    4. Date
-
     Table structure(Theatre)
     Theatre
         Theatre_id(Primary key)
@@ -24,12 +15,13 @@ Entity - attribute - table structure
         Show_ID (Primary Key)
         Movie_ID (Foreign Key referencing Movie)
         Theatre_ID (Foreign Key referencing Theatre)
-        Date_ID (Foreign Key referencing Date)
-        Show_Time
-        Screen_Number   
+        Show_Date
+        Show_Time  
 
-    Date
-        Date_ID (Primary Key)
-        Date
+    Booking
+        Booking_ID (Primary Key)
+        Show_ID (Foreign Key referencing Show)
+        User_ID
+        Number_of_Tickets
 
 
