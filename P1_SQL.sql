@@ -1,14 +1,14 @@
-//Database Creation
+-- //Database Creation
 CREATE DATABASE BookMyShow;
 
-// Using Datanbase
+-- Using Datanbase
 USE BookMyShow;
 
 
-// P1 - As part of this assignment, we need to list down all the entities, their attributes and the table structures for the scenario mentioned in the previous slide. You also need to write the SQL queries required to create these tables along with few sample entries. Ensure the tables follow 1NF, 2NF, 3NF and BCNF rules.
+-- P1 - As part of this assignment, we need to list down all the entities, their attributes and the table structures for the scenario mentioned in the previous slide. You also need to write the SQL queries required to create these tables along with few sample entries. Ensure the tables follow 1NF, 2NF, 3NF and BCNF rules.
 
 
-//Table Creation (Theatre)
+-- //Table Creation (Theatre)
 
 CREATE TABLE Theatre (
     Theatre_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,7 +17,7 @@ CREATE TABLE Theatre (
     Capacity INT
 );
 
-//Inserting Data (Theatre)
+-- //Inserting Data (Theatre)
 
 INSERT INTO Theatre (Theatre_Name, Location, Capacity) VALUES 
     ('PVR SuryaIsland', 'Bhilai Nagar', 500),
@@ -25,7 +25,7 @@ INSERT INTO Theatre (Theatre_Name, Location, Capacity) VALUES
 
 
 
-//Table Creation (Movie)
+-- //Table Creation (Movie)
 
 CREATE TABLE movie (
     Movie_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,7 +34,7 @@ CREATE TABLE movie (
     Duration TIME
 );
 
-//Inserting Data (Movie)
+-- //Inserting Data (Movie)
 
 INSERT INTO Movie (Movie_Name, Genre, Duration) VALUES 
     ('Dasara(UA)', 'Action Thriller', '02:36:00'),
@@ -44,7 +44,7 @@ INSERT INTO Movie (Movie_Name, Genre, Duration) VALUES
 
 
 
-//Table Creation (Show)
+-- //Table Creation (Show)
 
 CREATE TABLE Shows (
     Show_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +56,7 @@ CREATE TABLE Shows (
     FOREIGN KEY (Theatre_ID) REFERENCES Theatre(Theatre_ID)
    );
 
-//Inserting Data (Shows)
+-- //Inserting Data (Shows)
 
 INSERT INTO Shows (Theatre_ID, Movie_ID, Show_Date, Show_Time) VALUES 
 	(1, 1, '2024-03-27', '12:15:00'),
@@ -118,7 +118,7 @@ INSERT INTO Shows (Theatre_ID, Movie_ID, Show_Date, Show_Time) VALUES
 
 
 
-//Table Creation (Booking)
+-- //Table Creation (Booking)
 
 CREATE TABLE Booking (
     Booking_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -128,7 +128,7 @@ CREATE TABLE Booking (
     FOREIGN KEY (Show_ID) REFERENCES Shows(Show_ID)
 );
 
-//Inserting Data (Booking)
+-- //Inserting Data (Booking)
 
 INSERT INTO Booking (Show_ID, User_ID, Number_of_Tickets) VALUES 
     (5, 07, 2),

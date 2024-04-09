@@ -1,6 +1,6 @@
 
 
-// P2 - Write a query to list down all the shows on a given date at a given theatre along with their respective show timings.
+-- // P2 - Write a query to list down all the shows on a given date at a given theatre along with their respective show timings.
 
 SELECT M.Movie_Name, S.Show_Time
     FROM Shows S
